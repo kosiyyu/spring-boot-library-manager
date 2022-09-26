@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+<body>
+<nav th:replace="layouts :: navbar"/>
+<div class="container">
+	<br>
+	<h1>Logout</h1>
+	<hr>
+	<br>
+	<form th:action="@{/logout/handle}" method="POST">
+		<div class="form-group">
+			<button type="submit" value="/logout" class="btn btn-outline-warning">Click here to logout</button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

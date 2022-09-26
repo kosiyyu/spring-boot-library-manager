@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+
+
+    <body>
+        <div class="d-flex align-items-center justify-content-center vh-100">
+            <div class="text-center">
+                <h1 class="display-1 fw-bold text-success">You've been logged out</h1>
+                  <p class="lead">
+                	<span>or you haven't been logged at all.</span>
+                  </p>
+                <a th:href="@{/}" class="btn btn-outline-warning">Go back to home page</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+<body>
+<nav th:replace="layouts :: navbar"/>
+<div class="container">
+	<br>
+	<h1>Register</h1>
+	<hr>
+	<br>
+	<form th:action="@{/register/save}" th:object="${user}" method="POST">
+		<input type="hidden" th:field="${user.userId}"/>
+		<div class="form-group">
+			<label for="inputUsername">Username</label>
+			<input type="text" class="form-control" id="inputUsername" th:field="${user.username}" minlength="1" maxlength="255" required>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword">Password</label>
+			<input type="password" class="form-control" id="inputPassword" th:field="${user.password}" minlength="8" maxlength="255" required>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail">Email</label>
+			<input type="email" class="form-control" id="inputEmail" th:field="${user.email}" maxlength="255" required>
+		</div>
+		<div class="form-group">
+			<label for="selectBookBorrowed">Role</label>
+			<select class="form-control" id="selectRole" th:field="${user.role}">
+				<option th:value="USER">USER</option>
+				<option th:value="ADMIN">ADMIN</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-outline-warning">Apply</button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

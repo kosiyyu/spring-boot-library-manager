@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+<body>
+	<nav th:replace="layouts :: navbar"/>
+	<div class="container">
+		<br>
+		<h1>Books directory</h1>
+		<hr>
+		<br>
+		<div><a th:href="@{/books/new}" class="btn btn-outline-warning">Add book</a></div>
+		<br>
+		<table class="table">
+			<thead>
+			  	<tr>
+				    <th>Name</th>
+				    <th>Borrowed</th>
+				    <th>Published date</th>
+				    <th>Publisher</th>
+				    <th style="width:30%">Description</th>
+				    <th style="width:20%">Action<th>
+				</tr>
+			</thead>
+		  <tr:block th:each="book: ${bookList}">
+		    <td>[[${book.getName()}]]</td>
+		    <td>[[${book.isBorrowed()}]]</td>
+		    <td>[[${#dates.format(book.getPublished(), 'yyyy-MM-dd')}]]</td>
+		    <td>[[${book.getPublisher()}]]</td>
+		    <td>[[${book.getDescription()}]]</td>
+		    <td>
+		    	<a th:href="@{/books/update(bookId=${book.bookId})}" class="btn btn-outline-warning">Update</a>	
+				<a th:href="@{/books/delete(bookId=${book.bookId})}" class="btn btn-outline-danger">Delete</a>
+		    </td>
+		  </tr>
+		</table>
+	</div>
+</body>
+</html>

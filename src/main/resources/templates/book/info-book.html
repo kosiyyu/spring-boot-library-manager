@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+<body>
+<nav th:replace="layouts :: navbar"/>
+<div class="container">
+<br>
+<h1>Book info</h1>
+<hr>
+<br>
+<dl class="row" th:object="${book}">
+  <dt class="col-sm-3">Title:</dt>
+  <dd class="col-sm-9"><h2>[[${book.getName()}]]</h2></dd>
+
+  <dt class="col-sm-3">Authors:</dt>
+  <dd class="col-sm-9">[[${homeService.displayAuthors(book.getAuthors())}]]</dd>
+
+  <dt class="col-sm-3">Published:</dt>
+  <dd class="col-sm-9">[[${#dates.format(book.getPublished(), 'yyyy-MM-dd')}]]</dd>
+  
+  <dt class="col-sm-3">Publisher:</dt>
+  <dd class="col-sm-9">[[${book.getPublisher()}]]</dd>
+
+  <dt class="col-sm-3">Description:</dt>
+    <dd class="col-sm-9">
+    <div class="w-50">
+    [[${book.getDescription()}]]
+    </div>
+  </dd>
+
+</dl>
+</div>
+</body>
+</html>

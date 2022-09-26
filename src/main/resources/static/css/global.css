@@ -1,0 +1,8 @@
+.form-control:focus {
+  border-color: #ffc107 !important;
+  box-shadow: 0 0 10px rgba(255,193,7,0.25) !important;
+}
+
+.navbar-custom {
+    background-color: lightgreen;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts :: header"/>
+<body>
+<nav th:replace="layouts :: navbar"/>
+	<div class="container">
+		<br>
+		<h1>Authors directory</h1>
+		<hr>
+		<br>
+			<div>
+				<a th:href="@{/authors/new}" class="btn btn-outline-warning">Add author</a>
+			</div>
+		<br>
+		<table class="table">
+			<thead>
+			  	<tr>
+				    <th>First Name</th>
+				    <th>Last Name</th>
+				    <th>Birthday date</th>
+				    <th>Action<th>
+			  	</tr>
+		  	</thead>
+			<tr th:block th:each="author: ${authorList}">
+			    <td>[[${author.getFirstName()}]]</td>
+			    <td>[[${author.getLastName()}]]</td>
+			    <td>[[${#dates.format(author.getBirthday(), 'yyyy-MM-dd')}]]</td>
+			    <td>
+					<a th:href="@{/authors/update(authorId=${author.authorId})}" class="btn btn-outline-warning">Update</a>
+					<a th:href="@{/authors/delete(authorId=${author.authorId})}" class="btn btn-outline-danger">Delete</a>
+			    </td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
