@@ -24,7 +24,7 @@ Work in progress... ;))
 
 
 ## Images and desription
-![](spring-boot-library-manager/Screenshot%20%(14).png)
+![](spring-boot-library-manager/Screenshot%20(14).png)
 
 
 ## Author
