@@ -20,9 +20,6 @@ To deploy this project run
   git clone https://github.com/Kosiyyu/spring-boot-library-manager
 ```
 
-Work in progress... ;)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-
-
 ## Author
 
 - [@Kosiyyu](https://github.com/Kosiyyu)
