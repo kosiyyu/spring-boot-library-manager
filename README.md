@@ -19,7 +19,7 @@ To deploy this project run
 ```bash
   git clone https://github.com/Kosiyyu/spring-boot-library-manager
 ```
-Work in progress...
+Work in progress... ;))
 
 ## Author
 
