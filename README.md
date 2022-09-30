@@ -31,12 +31,9 @@ Work in progress... ;))
 
 
 
-## Images and desription
-- Home page
-![Home page](https://github.com/Kosiyyu/images/blob/8a065391f599e9a0b028afae9a773640cd01bf90/spring-boot-library-manager/Screenshot%20(14).png)
+## Images
+- [Project screenshots](https://github.com/Kosiyyu/images/tree/main/spring-boot-library-manager)
 
-- Presenting search bar
-![Search bar](https://github.com/Kosiyyu/images/blob/8a065391f599e9a0b028afae9a773640cd01bf90/spring-boot-library-manager/Screenshot%20(15).png)
 
 Work in progress... ;))
 ## Author
