@@ -27,15 +27,9 @@ Then you should comment line 41 at spring-boot-library-manager/src/main/java/com
 ```
 The above line prevents users and administrators from registering for everyone except administrators.
 
-Work in progress... ;))
-
-
-
 ## Images
 - [Project screenshots](https://github.com/Kosiyyu/images/tree/main/spring-boot-library-manager)
 
-
-Work in progress... ;))
 ## Author
 
 - [@Kosiyyu](https://github.com/Kosiyyu)
