@@ -23,7 +23,7 @@ When you run the project for the first time, you can create an administrator acc
 Then you should comment line 41 at spring-boot-library-manager/src/main/java/com/proj/library/security/WebSecurityConfiguration.java:
 
 ```bash
-  .antMatchers("/register","register/**").hasAnyAuthority("ADMIN")
+  //.antMatchers("/register","register/**").hasAnyAuthority("ADMIN")
 ```
 
 Work in progress... ;))
