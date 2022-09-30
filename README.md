@@ -1,4 +1,3 @@
-
 # Library-manager
 Spring boot CRUD API project enabling basic management in library. Contains:
 
@@ -9,11 +8,7 @@ Spring boot CRUD API project enabling basic management in library. Contains:
 - Database and many-to-many relationship
 - Error handling
 
-
-
-
 ## Deployment
-
 To deploy and run
 
 ```bash
@@ -31,6 +26,5 @@ The above line prevents users and administrators from registering for everyone e
 - [Project screenshots](https://github.com/Kosiyyu/images/tree/main/spring-boot-library-manager)
 
 ## Author
-
 - [@Kosiyyu](https://github.com/Kosiyyu)
 
