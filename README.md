@@ -14,7 +14,7 @@ Spring boot CRUD API project enabling basic management in library. Contains:
 
 ## Deployment
 
-To deploy this project run
+To deploy and run
 
 ```bash
   git clone https://github.com/Kosiyyu/spring-boot-library-manager
@@ -23,8 +23,9 @@ When you run the project for the first time, you can create an administrator acc
 Then you should comment line 41 at spring-boot-library-manager/src/main/java/com/proj/library/security/WebSecurityConfiguration.java:
 
 ```bash
-  //.antMatchers("/register","register/**").hasAnyAuthority("ADMIN")
+  .antMatchers("/register","register/**").hasAnyAuthority("ADMIN")
 ```
+The above line prevents users and administrators from registering for everyone except administrators.
 
 Work in progress... ;))
 
