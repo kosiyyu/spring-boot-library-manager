@@ -24,7 +24,7 @@ The above line prevents users and administrators from registering for everyone e
 
 ## Images
 ![Project screenshot](https://github.com/Kosiyyu/images/blob/main/spring-boot-library-manager/Screenshot%20(14).png)
-- [More](https://github.com/Kosiyyu/images/tree/main/spring-boot-library-manager)
+- [More images](https://github.com/Kosiyyu/images/tree/main/spring-boot-library-manager)
 
 ## Author
 - [@Kosiyyu](https://github.com/Kosiyyu)
