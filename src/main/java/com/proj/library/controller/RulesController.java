@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/rules")
 public class RulesController {
-	
-	@GetMapping
-	public String displayRules() {
-		return "rules/rules";
-	}
+
+    @GetMapping
+    public String displayRules() {
+        return "rules/rules";
+    }
 }

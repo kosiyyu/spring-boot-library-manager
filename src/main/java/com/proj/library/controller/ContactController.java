@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/contact")
 public class ContactController {
 
-	@GetMapping
-	public String displayContactPage() {
-		return "contact/contact";
-	}
+    @GetMapping
+    public String displayContactPage() {
+        return "contact/contact";
+    }
 }

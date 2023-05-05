@@ -1,13 +1,14 @@
 package com.proj.library.repository;
 
-import java.util.List;
-
+import com.proj.library.model.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.proj.library.model.Author;
+import java.util.List;
+
 @Repository
-public interface IAuthorRepository extends JpaRepository<Author,Long>{
-	public List<Author> findAll();
-	public void deleteById(long id);
+public interface IAuthorRepository extends JpaRepository<Author, Long> {
+    List<Author> findAll();
+
+    void deleteById(long id);
 }

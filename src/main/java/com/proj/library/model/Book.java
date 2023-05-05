@@ -1,128 +1,109 @@
 package com.proj.library.model;
 
-import java.util.Date;
-import java.util.List;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Book {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private long bookId;
-	
-	@NotBlank
-	@Size(min = 1, max = 100)
-	private String name;
-	
-	@NotNull
-	private boolean borrowed;
-	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date published;
-	
-	@NotNull
-	@Size(max = 255)
-	private String publisher;
-	
-	@NotNull
-	@Size(max = 500)
-	private String description;
-	
-	@ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
-			fetch=FetchType.LAZY)
-	@JoinTable(
-			name="book_author",
-			joinColumns=@JoinColumn(name="book_id"),
-			inverseJoinColumns=@JoinColumn(name="author_id"))
-	private List<Author> authors;
-	
-	public Book() {}
 
-	public Book(String name, boolean borrowed, Date published, String publisher, String description) {
-		this.name = name;
-		this.borrowed = borrowed;
-		this.published = published;
-		this.publisher = publisher;
-		this.description = description;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long bookId;
 
-	public long getBookId() {
-		return bookId;
-	}
+    @NotBlank
+    @Size(min = 1, max = 100)
+    private String name;
 
-	public void setBookId(long bookId) {
-		this.bookId = bookId;
-	}
+    @NotNull
+    private boolean borrowed;
 
-	public String getName() {
-		return name;
-	}
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date published;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    @NotNull
+    @Size(max = 255)
+    private String publisher;
 
-	public boolean isBorrowed() {
-		return borrowed;
-	}
+    @NotNull
+    @Size(max = 500)
+    private String description;
 
-	public void setBorrowed(boolean borrowed) {
-		this.borrowed = borrowed;
-	}
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private List<Author> authors;
 
-	public Date getPublished() {
-		return published;
-	}
+    public Book() {
+    }
 
-	public void setPublished(Date published) {
-		this.published = published;
-	}
+    public Book(String name, boolean borrowed, Date published, String publisher, String description) {
+        this.name = name;
+        this.borrowed = borrowed;
+        this.published = published;
+        this.publisher = publisher;
+        this.description = description;
+    }
 
-	public String getPublisher() {
-		return publisher;
-	}
+    public long getBookId() {
+        return bookId;
+    }
 
-	public void setPublisher(String publisher) {
-		this.publisher = publisher;
-	}
+    public void setBookId(long bookId) {
+        this.bookId = bookId;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public List<Author> getAuthors() {
-		return authors;
-	}
+    public boolean isBorrowed() {
+        return borrowed;
+    }
 
-	public void setAuthors(List<Author> authors) {
-		this.authors = authors;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    public void setBorrowed(boolean borrowed) {
+        this.borrowed = borrowed;
+    }
+
+    public Date getPublished() {
+        return published;
+    }
+
+    public void setPublished(Date published) {
+        this.published = published;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
+    }
+
+
 }

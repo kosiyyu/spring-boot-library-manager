@@ -34,6 +34,7 @@
 			<textarea type="text" class="form-control" id="labelBookDescription" th:field="${book.description}" maxlength="500"/>
 		</div>
 		<div class="form-group">
+			<label for="labelBookDescription">Author</label>
 			<select class="form-control" th:field="${book.authors}" multiple="multiple">
 				<option th:each="author : ${authorList}"
 						th:value="${author.authorId}"

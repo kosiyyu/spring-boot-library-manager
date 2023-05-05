@@ -23,6 +23,7 @@
 			<input type="date" class="form-control" id="inputBirthday" th:field="${author.birthday}">
 		</div>
 		<div class="form-group">
+			<label for="inputBirthday">Books</label>
 			<select class="form-control" th:field="${author.books}" multiple="multiple">
 				<option th:each="book : ${bookList}"
 						th:value="${book.bookId}"
